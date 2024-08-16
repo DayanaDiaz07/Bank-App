@@ -1,0 +1,186 @@
+
+
+.title {
+  color: white;
+  font-size: 24px; /* Adjust size as needed */
+  text-align: center;
+  margin: 0; /* Remove default margin */
+}
+
+.styled-table {
+  width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
+  border-collapse: collapse;
+}
+
+.message {
+  color: black;
+  font-size: 24px; /* Adjust size as needed */
+  text-align: center;
+  margin: 0; /* Remove default margin */
+}
+
+
+/* Container for the table */
+.table-container {
+    max-width: 800px; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for the table */
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: rgb(75, 122, 189); /* Main purple tone */
+  }
+  
+  .styled-table thead tr {
+    background-color: rgb(75, 122, 189); /* Slightly darker purple for header */
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #000000;
+  }
+  
+  .styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .styled-table tbody tr:nth-of-type(even) {
+    background-color: rgb(112, 160, 226); /*pares*/
+  }
+  
+  .styled-table tbody tr:nth-of-type(odd) {
+    background-color: rgb(139, 177, 229); /*impares*/
+  }
+  
+  .styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #9b97c7; /* Darker purple for the last row border */
+  }
+  
+  .styled-table tbody tr:hover {
+    background-color: #a39ed8; /* Hover color */
+  }
+  
+  .styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #9b97c7; /* Darker purple for active row */
+  }
+  
+  /* Style for buttons */
+  .styled-button {
+    background-color: rgb(75, 122, 189); /* Main blue tone */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 5px;
+  }
+  
+  .styled-button:hover {
+    background-color: rgb(60, 102, 168); /* Slightly darker blue for hover */
+  }
+  
+  .styled-button:active {
+    background-color: rgb(45, 85, 145); /* Even darker blue for active */
+  }
+  
+  .styled-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(75, 122, 189, 0.5); /* Light blue shadow */
+  }
+
+  /* Style red buttons*/
+
+  .styled-neg-button {
+    background-color: rgb(189, 75, 109); /* Main blue tone */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 5px;
+  }
+  
+  .styled-neg-button:hover {
+    background-color: rgb(168, 60, 83); /* Slightly darker blue for hover */
+  }
+  
+  .styled-neg-button:active {
+    background-color: rgb(165, 67, 129); /* Even darker blue for active */
+  }
+  
+  .styled-neg-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(75, 122, 189, 0.5); /* Light blue shadow */
+  }
+  
+  /* Container for the form */
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(75, 122, 189, 0.5); /* Light purple */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for form group (label + input) */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(40, 39, 57); /* Main purple tone */
+  }
+  
+  .styled-input {
+    width: 95%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .styled-input:focus {
+    border-color: rgb(124, 122, 189); /* Main purple tone */
+    box-shadow: 0 0 5px rgba(124, 122, 189, 0.3); /* Purple shadow */
+    outline: none;
+  }
+  
+  /* Container for buttons in form */
+  .button-group {
+    display: flex;
+    gap: 10px;
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .table-container {
+    max-height: 400px; /* Altura máxima para el contenedor de la tabla */
+    overflow-y: auto; /* Scroll vertical */
+  }
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

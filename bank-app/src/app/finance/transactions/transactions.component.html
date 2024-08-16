@@ -1,0 +1,75 @@
+
+<div class="form-container">
+  <div class="form-group">
+    <label for="type">Type:</label>
+    <select id="type" [(ngModel)]="type" class="styled-input">
+      <option *ngFor="let t of typeOptions" [value]="t">{{ t }}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="numberAccount">Number Account:</label>
+    <input id="numberAccount" type="text" maxlength="15" [(ngModel)]="numberAccount" class="styled-input">
+  </div>
+  <div class="form-group">
+    <label for="amount">Amount:</label>
+    <input id="amount" type="text" maxlength="15" [(ngModel)]="amount" class="styled-input">
+  </div>
+  <div class="form-group">
+    <label for="category">Category:</label>
+    <input id="category" type="text" maxlength="15" [(ngModel)]="category" class="styled-input">
+  </div>
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <input id="description" type="text" maxlength="15" [(ngModel)]="description" class="styled-input">
+  </div>
+  <div class="form-group">
+    <label for="state">State:</label>
+    <select id="state" [(ngModel)]="state" class="styled-input">
+      <option *ngFor="let s of stateOptions" [value]="s">{{ s }}</option>
+    </select>
+  </div>
+  <div class="button-group">
+    <button class="styled-button" type="button" (click)="saveTransaction()">Save Transaction</button> 
+  </div>
+</div>
+
+
+<h3>{{message}}</h3> 
+
+<div *ngIf="this.isTransaction == true; then showTransactions"></div>
+
+<ng-template #showTransactions>
+  <div class="table-container">
+      <table class="styled-table">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Tipo</th>
+                  <th>Fecha</th>
+                  <th>Monto</th>
+                  <th>Categoría</th>
+                  <th>Descripción</th>
+                  <th>Estado</th>
+                  <th>Saldo</th>
+                  <th>Balance</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let transac of transactions">
+                  <td>{{transac.id}}</td>
+                  <td>{{transac.Type}}</td>
+                  <td>{{transac.Date| date:"dd/MMM/yyyy"}}</td>
+                  <td>{{transac.Amount | currency}}</td>
+                  <td>{{transac.Category}}</td>
+                  <td>{{transac.Description}}</td>
+                  <td>{{transac.Status}}</td>
+                  <td>{{transac.Balance| currency}}</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</ng-template>
+
+
+
+

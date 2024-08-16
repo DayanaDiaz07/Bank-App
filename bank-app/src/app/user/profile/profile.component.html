@@ -1,0 +1,21 @@
+<form>
+    <div class="form-group">
+      <label for="userCode">User Code:</label>
+      <input type="text" id="userCode" name="userCode" [(ngModel)]="userCode" (keyup)="validateProfile()"/>
+    </div>
+
+    <div class="form-group">
+        <label for="userCode">User Code v2:</label>
+        <input type="text" id="userCode" name="userCodeV2" [(ngModel)]="userCodeV2"/>
+      </div>
+  
+    <div class="form-group">
+      <label for="userName">User Name:</label>
+      <input type="text" id="userName" name="userName" [(ngModel)]="userName"/>
+    </div>
+  
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password"/>
+    </div>
+  </form>

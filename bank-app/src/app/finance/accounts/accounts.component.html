@@ -1,0 +1,78 @@
+
+
+<div *ngIf="this.message == '' && this.isSavingAccount == false; then thenPrintTable else thenPrintMessage"></div>
+<div *ngIf="this.message == '' && this.isSavingAccount == true; then createAccountForm"></div>
+<div class="">
+  <input type="text" maxlength="15" [(ngModel)]="otherUserName">
+  <button class="styled-button" type="button" (click)="getAccounts()">Get other user accounts</button>  
+  <button class="styled-button" type="button" (click)="getMyOwnAccounts()">Get my own accounts</button>  
+  <button class="styled-button" type="button" (click)="saveAccountAvailable()">Create account</button>  
+</div>
+
+<ng-template #createAccountForm>
+  <div class="form-container">
+    <div class="form-group">
+      <label for="userName">account name:</label>
+      <input id="userName" type="text" maxlength="15" [(ngModel)]="account.NombCuen" class="styled-input">
+    </div>
+    <div class="form-group">
+        <label for="userName">account number:</label>
+        <input id="userName" type="text" maxlength="15" [(ngModel)]="account.NumeCuen" class="styled-input">
+      </div>
+    <div class="button-group">
+      <button class="styled-button" type="button" data-bs-toggle="modal" data-bs-target="#myModal">Create</button>
+    </div>
+  </div>
+
+<!-- El Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModalLabel">¿Do you want to save the account?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Name:</strong> {{ account.NombCuen }}</p>
+        <p><strong>Number:</strong> {{ account.NumeCuen }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">NO</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="saveAccount()">ACCEPT</button>
+      </div>
+    </div>
+  </div>
+</div>
+</ng-template>
+
+<ng-template #thenPrintTable>
+    <h1>
+        Cuentas de {{accounts[0].CodiUser}}
+    </h1>
+    <div class="table-container">
+    <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Number</th>
+            <th>Desciption</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let account of accounts">
+            <td>{{account.id}}</td>
+            <td>{{account.NumeCuen}}</td>
+            <td>{{account.NombCuen}}</td>
+          </tr>
+        </tbody>
+      </table>  
+    </div>  
+  </ng-template>
+
+  <ng-template #thenPrintMessage>
+    <h2>{{message}}</h2> 
+  </ng-template>
+
+
+
+  

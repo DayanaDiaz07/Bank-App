@@ -1,0 +1,30 @@
+
+<div class="form-container">
+    <div class="form-group">
+      <label for="userName">Code:</label>
+      <input id="userCode" type="text" maxlength="15" [(ngModel)]="userCode" class="styled-input">
+    </div>
+    <div class="form-group">
+      <label for="userName">Name:</label>
+      <input id="userName" type="text" maxlength="15" [(ngModel)]="userName" class="styled-input">
+    </div>
+    <div class="form-group">
+        <label for="userName">Email:</label>
+        <input id="userName" type="text" maxlength="15" [(ngModel)]="userEmail" class="styled-input">
+      </div>
+      <div class="form-group">
+        <label for="userPass">Cel:</label>
+        <input id="userPass" type="password" maxlength="15" [(ngModel)]="userCel" class="styled-input">
+      </div>
+    <div class="form-group">
+      <label for="userPass">Password:</label>
+      <input id="userPass" type="password" maxlength="15" [(ngModel)]="userPass" class="styled-input">
+    </div>
+    <div class="button-group">
+      <button class="styled-button" type="button" (click)="signUp()">Sign Up</button>
+      <button class="styled-neg-button" type="button" (click)="cancel()">Cancelar</button>  
+    </div>
+  </div>
+
+  <h1>{{message}}</h1> 
+

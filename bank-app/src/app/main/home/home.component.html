@@ -1,0 +1,49 @@
+
+<div>
+    <mat-tab-group animationDuration="0ms">
+        <mat-tab label="Pipes">
+            <ng-template matTabContent>
+                <div>
+                    <p>Hoy es {{ldtFecha | date}}</p>
+                    <p>Hoy es {{ldtFecha | date:"dd/MM/yy"}}</p>
+                    <p>Hoy es {{ldtFecha | date:"dd/MMM/yyyy"}}</p>
+                    <p>Hoy es {{ldtFecha | json}}</p>
+                    <br>
+                    <p>Valor {{lnumValor}}</p>
+                    <p>Valor moneda {{lnumValor | currency}}</p>
+                    <br>
+                    <p>Valor {{lnumPerc}}</p>
+                    <p>Valor porcentaje {{lnumPerc | percent}}</p>
+                    <br>
+                    <p>Texto {{lstrTexto}}</p>
+                    <p>Texto minúsculas {{lstrTexto | lowercase}}</p>
+                    <p>Texto mayúsculas {{lstrTexto | uppercase}}</p>                    
+                </div>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="ng-template">
+            <div>
+                <ng-template #mytemplate>
+                    <div>
+                        <p>Esta es mi plantilla</p>
+                    </div>
+                </ng-template>
+                
+                <ng-container *ngTemplateOutlet="mytemplate"></ng-container>
+                <ng-container *ngTemplateOutlet="mytemplate"></ng-container>
+                <ng-container *ngTemplateOutlet="mytemplate"></ng-container>                
+            </div>
+        </mat-tab>
+        <mat-tab label="Observable">
+            <div>
+                <button type="button" class="btn btn-primary" (click)="fnActiveObserver()">Activar observable</button>
+                <button type="button" class="btn btn-primary" (click)="fnTestObserver()">Probar observable</button>
+            </div>
+        </mat-tab>
+        <mat-tab label="Nuevo tab">
+            <div>
+                <p>nuevo tab este es el texto</p>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>
